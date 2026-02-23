@@ -1,0 +1,65 @@
+cns_firmware/
+│
+├── docs/                        # Datasheets & design docs
+│   ├── stm32f411ce.pdf
+│   ├── cortex_m4_trm.pdf
+│   └── architecture.md
+│
+├── drivers/                     # Low-level peripheral drivers
+│   ├── gpio/
+│   ├── spi/
+│   ├── i2c/
+│   ├── uart/
+│   ├── adc/
+│   ├── timers/
+│   └── can/
+│
+├── bsp/                         # Board Support Package
+│   ├── blackpill_f411/
+│   │   ├── clock_config.c
+│   │   ├── pin_map.h
+│   │   └── board_init.c
+│
+├── middleware/                  # Protocol & sensor stacks
+│   ├── imu/
+│   ├── barometer/
+│   ├── gps/
+│   ├── mavlink/
+│   ├── sensor_fusion/
+│   └── crc/
+│
+├── safety/                      # Safety-critical logic
+│   ├── watchdog.c
+│   ├── brownout.c
+│   ├── fault_handler.c
+│   ├── failsafe.c
+│   └── health_monitor.c
+│
+├── navigation/                  # SoC interface + command relay
+│   ├── nav_interface.c
+│   ├── command_router.c
+│   └── state_machine.c
+│
+├── control/                     # Real-time control loops
+│   ├── pid.c
+│   ├── motor_mixer.c
+│   ├── actuator_output.c
+│   └── scheduler.c
+│
+├── rtos/                        # Optional FreeRTOS or bare-metal scheduler
+│
+├── startup/
+│   ├── startup_stm32f411.s
+│   ├── linker.ld
+│   └── system_stm32f4xx.c
+│
+├── app/                         # High-level CNS application
+│   ├── main.c
+│   └── cns_core.c
+│
+├── tests/                       # Hardware tests & validation
+│
+├── tools/                       # Flash scripts, debug tools
+│
+├── Makefile
+└── README.md
